@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Zorro - Repostería Profesional</title>
+    <link rel="icon" type="image/svg+xml" href="imagenes/icono_vectorizado.svg">
+    <meta name="description" content="Repostería artesanal de alta calidad. Productos horneados con ingredientes naturales y recetas tradicionales.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo-container">
+                <div class="logo-container">
+                    <img src="imagenes/icono_vectorizado.svg" alt="Chef El Zorro Logo" class="logo">
+                    <div class="logo-text">
+                        <h1>El Zorro</h1>
+                        <p class="tagline">Excelencia en Repostería</p>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#destacados">Productos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Dulces Momentos, Sabores Inolvidables</h2>
+                <p>Descubre nuestra selección de postres artesanales elaborados con los mejores ingredientes y mucho cariño.</p>
+            </div>
+        </section>
+
+        <section id="destacados">
+            <h2>Nuestros Productos</h2>
+            <div class="filtro-categorias">
+                <button class="filtro-btn active" data-categoria="todos">Todos</button>
+                <button class="filtro-btn" data-categoria="navideno">Navideños</button>
+                <button class="filtro-btn" data-categoria="tradicional">Tradicionales</button>
+            </div>
+            <div class="productos-grid">
+                <!-- Producto 1 -->
+                <div class="producto" data-categoria="tradicional">
+                    <span class="etiqueta-nuevo">Destacado</span>
+                    <div class="producto-imagen">
+                        <img src="imagenes/roscos-vino.jpeg" alt="Roscos de Vino" loading="lazy">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-cabecera">
+                            <span class="producto-categoria">🍰 Tradicional</span>
+                            <div class="alergenos">
+                                <div class="alergeno-tooltip">
+                                    <i class="fas fa-bread-slice" title="Contiene gluten"></i>
+                                    <span class="tooltip-text">Contiene gluten</span>
+                                </div>
+                                <div class="alergeno-tooltip">
+                                    <i class="fas fa-egg" title="Contiene huevo"></i>
+                                    <span class="tooltip-text">Contiene huevo</span>
+                                </div>
+                                <div class="alergeno-tooltip">
+                                    <i class="fas fa-seedling" title="Contiene sésamo"></i>
+                                    <span class="tooltip-text">Contiene sésamo</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Roscos de Vino</h3>
+                        <p class="descripcion">Deliciosos roscos esponjosos con un toque de vino tinto.</p>
+                        <div class="ingredientes"><strong>Ingredientes:</strong> Harina de trigo, azúcar, huevo, vino tinto, aceite de girasol, levadura, canela y ajonjolí.</div>
+                        <div class="alergenos-lista">
+                            <strong>Alérgenos:</strong> Gluten, Huevo, Sésamo (ajonjolí)
+                        </div>
+                        <div class="producto-precio">
+                            <a href="https://www.instagram.com/tu_cuenta_de_instagram/" class="btn-instagram" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram">
+                                <i class="fab fa-instagram"></i> Ver en Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="producto" data-categoria="tradicional">
+                    <span class="etiqueta-nuevo">Destacado</span>
+                    <div class="producto-imagen">
+                        <img src="imagenes/tiramisu.jpg" alt="Tiramisú" loading="lazy">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-cabecera">
+                            <span class="producto-categoria">🍰 Tradicional</span>
+                            <div class="alergenos">
+                                <div class="alergeno-tooltip">
+                                    <i class="fas fa-bread-slice" title="Contiene gluten"></i>
+                                    <span class="tooltip-text">Contiene gluten</span>
+                                </div>
+                                <div class="alergeno-tooltip">
+                                    <i class="fas fa-egg" title="Contiene huevo"></i>
+                                    <span class="tooltip-text">Contiene huevo</span>
+                                </div>
+                                <div class="alergeno-tooltip">
+                                    <i class="fas fa-cheese" title="Contiene lácteos"></i>
+                                    <span class="tooltip-text">Contiene lácteos</span>
+                                </div>
+                                <div class="alergeno-tooltip">
+                                    <i class="fas fa-coffee" title="Contiene cafeína"></i>
+                                    <span class="tooltip-text">Contiene cafeína</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Tiramisú</h3>
+                        <p class="descripcion">Clásico postre italiano con capas de café y mascarpone.</p>
+                        <div class="ingredientes"><strong>Ingredientes:</strong> Queso mascarpone, huevos, azúcar, café, bizcochos de soletilla, cacao en polvo y licor de café (opcional).</div>
+                        <div class="alergenos-lista">
+                            <strong>Alérgenos:</strong> Gluten, Huevo, Lacteos, Cafeína
+                        </div>
+                        <div class="producto-precio">
+                            <a href="https://www.instagram.com/tu_cuenta_de_instagram/" class="btn-instagram" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram">
+                                <i class="fab fa-instagram"></i> Ver en Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Añade más productos aquí siguiendo el mismo patrón -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-contenido">
+                <div class="footer-col">
+                    <h3>El Zorro</h3>
+                    <p>Repostería artesanal de calidad superior. Elaboramos cada producto con ingredientes naturales y mucho cariño.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#destacados">Productos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Horario</h4>
+                    <p>Lunes - Viernes: 9:00 - 20:00</p>
+                    <p>Sábados: 10:00 - 15:00</p>
+                    <p>Domingos: Cerrado</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Suscríbete para recibir nuestras ofertas especiales.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-inferior">
+                <p>&copy; 2023 El Zorro. Todos los derechos reservados.</p>
+                <div class="leyenda-alergenos">
+                    <p>Alérgenos: Gluten, Huevo, Lacteos, Frutos secos</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de Instagram -->
+    <a href="https://www.instagram.com/tu_cuenta_de_instagram/" class="instagram-button" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram">
+        <i class="fab fa-instagram"></i>
+        <span>Ver en Instagram</span>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
