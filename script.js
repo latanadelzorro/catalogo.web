@@ -21,16 +21,6 @@ const productos = [
         destacado: true
     },
     {
-        id: 3,
-        nombre: "Polvorones",
-        descripcion: "Tradicionales polvorones de almendra, esponjosos y sabrosos.",
-        ingredientes: "Harina de trigo, azúcar, almendra molida, canela, ajonjili, limón y manteca de cerdo",
-        categoria: "navideno",
-        imagen: "imagenes/polvorones.jpeg",
-        alergenos: ["Gluten", "Frutos secos (almendra)", "Sésamo (ajonjili)", "Sulfitos"],
-        destacado: false
-    },
-    {
         id: 4,
         nombre: "Mantecados",
         descripcion: "Clásicos mantecados de canela, suaves y aromáticos.",
@@ -39,16 +29,6 @@ const productos = [
         imagen: "imagenes/mantecados.jpeg",
         alergenos: ["Gluten", "Sésamo (ajonjili)", "Sulfitos"],
         destacado: false
-    },
-    {
-        id: 5,
-        nombre: "Tronco de Navidad",
-        descripcion: "Delicioso bizcocho enrollado con crema de chocolate.",
-        ingredientes: "Huevos, azúcar, harina de trigo, cacao en polvo, nata para montar, chocolate negro y azúcar glass",
-        categoria: "navideno",
-        imagen: "imagenes/tronco de navida.jpeg",
-        alergenos: ["Gluten", "Huevo", "Lacteos", "Frutos secos (puede contener trazas)"],
-        destacado: true
     },
     {
         id: 6,
@@ -61,16 +41,6 @@ const productos = [
         destacado: false
     },
     {
-        id: 7,
-        nombre: "Turrón Artesanal",
-        descripcion: "Turrón blando de almendra con miel de la mejor calidad.",
-        ingredientes: "Almendra tostada, miel, azúcar, clara de huevo, oblea y canela",
-        categoria: "navideno",
-        imagen: "imagenes/turron artesanal.jpeg",
-        alergenos: ["Frutos secos (almendra)", "Huevo", "Gluten (trazas)"],
-        destacado: true
-    },
-    {
         id: 8,
         nombre: "Magdalenas Caseras",
         descripcion: "Esponjosas magdalenas caseras con toque de limón, recién horneadas.",
@@ -81,16 +51,6 @@ const productos = [
         destacado: false
     },
     {
-        id: 9,
-        nombre: "Roscón de Reyes",
-        descripcion: "Especialidad navideña rellena de nata y decorada con fruta confitada.",
-        ingredientes: "Harina de trigo, huevos, azúcar, mantequilla, leche, ralladura de naranja, agua de azahar, almendras y fruta confitada",
-        categoria: "navideno",
-        imagen: "imagenes/rosconreyes.jpeg",
-        alergenos: ["Gluten", "Huevo", "Lacteos", "Frutos secos (almendra)", "Sulfitos (fruta confitada)"],
-        destacado: true
-    },
-    {
         id: 10,
         nombre: "Hojaldrinas",
         descripcion: "Delicadas pastas de hojaldre espolvoreadas con azúcar glass.",
@@ -98,6 +58,36 @@ const productos = [
         categoria: "tradicional",
         imagen: "imagenes/hojaldrinas.jpeg",
         alergenos: ["Gluten", "Lacteos"],
+        destacado: false
+    },
+    {
+        id: 11,
+        nombre: "Palmeras",
+        descripcion: "Crujientes palmeras de hojaldre caramelizadas.",
+        ingredientes: "Harina de trigo, mantequilla, azúcar, sal",
+        categoria: "tradicional",
+        imagen: "imagenes/palmeras.jpeg",
+        alergenos: ["Gluten", "Lacteos"],
+        destacado: false
+    },
+    {
+        id: 12,
+        nombre: "Piononos",
+        descripcion: "Dulce tradicional con una fina lámina de bizcocho y crema tostada.",
+        ingredientes: "Harina de trigo, huevos, azúcar, leche, canela y licor",
+        categoria: "tradicional",
+        imagen: "imagenes/piononos.jpeg",
+        alergenos: ["Gluten", "Huevo", "Lacteos"],
+        destacado: false
+    },
+    {
+        id: 13,
+        nombre: "Roscos de Azúcar",
+        descripcion: "Roscos tradicionales cubiertos de una fina capa de azúcar glass.",
+        ingredientes: "Harina de trigo, azúcar, huevos, aceite de girasol, anís y azúcar glass",
+        categoria: "tradicional",
+        imagen: "imagenes/roscos-azucar.jpeg",
+        alergenos: ["Gluten", "Huevo"],
         destacado: false
     }
 ];
