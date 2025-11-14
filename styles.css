@@ -212,12 +212,16 @@ nav a {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 200%;
+    height: 200%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     z-index: -1;
+    gap: 4px;
+    transform: scale(0.5);
+    transform-origin: top left;
+    overflow: hidden;
 }
 
 .hero-collage::before {
@@ -274,8 +278,11 @@ nav a {
     }
     
     .hero-collage {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(6, 1fr);
+        width: 300%;
+        height: 300%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        transform: scale(0.33);
     }
 }
 
@@ -628,7 +635,38 @@ footer {
 /* Ajustes para pantallas muy pequeñas */
 @media (max-width: 480px) {
     .hero-content h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
+    }
+    
+    /* Hacer las imágenes de productos más grandes en móvil */
+    .producto {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .producto-imagen {
+        height: 250px; /* Aumentar la altura de las imágenes */
+    }
+    
+    .producto-imagen img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /* Ajustar el tamaño de las imágenes en el collage del hero */
+    .hero-collage {
+        width: 400%;
+        height: 400%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        transform: scale(0.25);
+    }
+    
+    /* Hacer las imágenes del collage más grandes */
+    .hero-collage img {
+        min-height: 300px;
+        object-fit: cover;
     }
 
     .hero-content p {
