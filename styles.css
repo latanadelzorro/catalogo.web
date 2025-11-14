@@ -195,7 +195,7 @@ nav a {
 
 /* Sección Hero */
 #hero {
-    background: linear-gradient(rgba(93, 64, 55, 0.7), rgba(141, 110, 99, 0.7)), url('../imagenes/hero-bg.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(93, 64, 55, 0.7), rgba(141, 110, 99, 0.7)), url('imagenes/hero-bg.jpg') center/cover no-repeat;
     height: 100vh;
     display: flex;
     align-items: center;
