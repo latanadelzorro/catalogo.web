@@ -61,8 +61,8 @@
                 <p>Descubre nuestra selección de postres artesanales elaborados con ingredientes de temporada, procesos cuidados y presentaciones listas para tu negocio.</p>
                 <div class="hero-stats" aria-label="Datos destacados del catálogo">
                     <div class="hero-stat">
-                        <span class="stat-number">+20</span>
-                        <span class="stat-label">Referencias exclusivas</span>
+                        <span class="stat-number">10</span>
+                        <span class="stat-label">recetas tradicionales</span>
                     </div>
                     <div class="hero-stat">
                         <span class="stat-number">48 h</span>
@@ -74,33 +74,6 @@
                     </div>
                 </div>
                 <a href="#destacados" class="btn">Ver catálogo completo</a>
-            </div>
-        </section>
-
-        <section class="catalogo-intro">
-            <div class="intro-text">
-                <p class="section-kicker">Solo catálogo · B2B y eventos</p>
-                <h2>Una colección curada para profesionales exigentes</h2>
-                <p>Centraliza tus pedidos con una carta compacta, fotografiada y estandarizada. Cada ficha incluye categoría, ingredientes y alérgenos para facilitar la comunicación con tus clientes y cumplir con normativa alimentaria.</p>
-                <ul class="intro-list">
-                    <li>Producción bajo pedido con entregas programadas.</li>
-                    <li>Formato degustación y bandejas personalizadas.</li>
-                    <li>Asesoría para vitrinas, coffee breaks y celebraciones.</li>
-                </ul>
-            </div>
-            <div class="catalogo-meta">
-                <article class="meta-card">
-                    <h3>Escalabilidad</h3>
-                    <p>Lotes adaptados a cafeterías, caterings y eventos corporativos sin perder consistencia.</p>
-                </article>
-                <article class="meta-card">
-                    <h3>Logística</h3>
-                    <p>Entrega local en 24-48h y opciones de conservación refrigerada para mayor vida útil.</p>
-                </article>
-                <article class="meta-card">
-                    <h3>Atención directa</h3>
-                    <p>Canal exclusivo por WhatsApp para consultas rápidas, modificaciones y disponibilidad.</p>
-                </article>
             </div>
         </section>
 
@@ -476,5 +449,20 @@
    <a href="https://wa.me/qr/JVZWB7JE7RNFM1" class="whatsapp-button" target="_blank" aria-label="Chatea con nosotros por WhatsApp">
        <i class="fab fa-whatsapp"></i>
    </a>
+
+    <script>
+        // Calcula automáticamente el número de recetas tradicionales y actualiza la estadística del héroe
+        document.addEventListener('DOMContentLoaded', function () {
+            const productosTradicionales = document.querySelectorAll('.grid-productos .producto[data-categoria="tradicional"]');
+            const totalTradicionales = productosTradicionales.length;
+
+            if (totalTradicionales > 0) {
+                const heroStatNumber = document.querySelector('#hero .hero-stats .hero-stat .stat-number');
+                if (heroStatNumber) {
+                    heroStatNumber.textContent = totalTradicionales.toString();
+                }
+            }
+        });
+    </script>
 </body>
 </html>
