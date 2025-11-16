@@ -1,0 +1,32 @@
+{
+  "id": "producto-008",
+  "nombre": "Pestiños",
+  "descripcion": "Dulce tradicional andaluz de Semana Santa.",
+  "precio": 11.00,
+  "categoria": "tradicional",
+  "ingredientes": [
+    "Harina de trigo",
+    "vino blanco",
+    "aceite de oliva",
+    "azúcar",
+    "canela",
+    "ajonjili",
+    "cáscara de naranja"
+  ],
+  "alergenos": ["gluten", "vino", "sesamo"],
+  "disponible": true,
+  "destacado": false,
+  "imagenes": [
+    {
+      "src": "imagenes/pestiños.jpg",
+      "alt": "Pestiños",
+      "tipo": "principal"
+    }
+  ],
+  "variantes": [
+    {
+      "nombre": "Cantidad",
+      "opciones": ["6 unidades", "12 unidades", "24 unidades"]
+    }
+  ]
+}

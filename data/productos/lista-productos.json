@@ -1,0 +1,30 @@
+[
+  {
+    "id": "001",
+    "archivo": "producto-001.json"
+  },
+  {
+    "id": "002",
+    "archivo": "producto-002.json"
+  },
+  {
+    "id": "003",
+    "archivo": "producto-003.json"
+  },
+  {
+    "id": "004",
+    "archivo": "producto-004.json"
+  },
+  {
+    "id": "005",
+    "archivo": "producto-005.json"
+  },
+  {
+    "id": "007",
+    "archivo": "producto-007.json"
+  },
+  {
+    "id": "008",
+    "archivo": "producto-008.json"
+  }
+]

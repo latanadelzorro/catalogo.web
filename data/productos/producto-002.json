@@ -1,0 +1,32 @@
+{
+  "id": "producto-002",
+  "nombre": "Tiramisú",
+  "descripcion": "Clásico postre italiano con capas de café y mascarpone.",
+  "precio": 14.50,
+  "categoria": "tradicional",
+  "ingredientes": [
+    "Queso mascarpone",
+    "huevos",
+    "azúcar",
+    "café",
+    "bizcochos de soletilla",
+    "cacao en polvo",
+    "licor de café (opcional)"
+  ],
+  "alergenos": ["gluten", "huevo", "lacteos", "cafeina"],
+  "disponible": true,
+  "destacado": true,
+  "imagenes": [
+    {
+      "src": "imagenes/tiramisu.jpg",
+      "alt": "Tiramisú",
+      "tipo": "principal"
+    }
+  ],
+  "variantes": [
+    {
+      "nombre": "Tamaño",
+      "opciones": ["Individual", "Familiar"]
+    }
+  ]
+}

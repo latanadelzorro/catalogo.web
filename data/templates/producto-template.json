@@ -1,0 +1,29 @@
+{
+  "id": "producto-XXX",
+  "nombre": "Nombre del Producto",
+  "descripcion": "Descripción detallada del producto",
+  "precio": 0.00,
+  "categoria": "categoria",
+  "ingredientes": ["ingrediente 1", "ingrediente 2"],
+  "alergenos": ["alergeno 1", "alergeno 2"],
+  "disponible": true,
+  "destacado": false,
+  "imagenes": [
+    {
+      "src": "assets/products/producto-XXX/principal.jpg",
+      "alt": "Imagen principal del producto",
+      "tipo": "principal"
+    },
+    {
+      "src": "assets/products/producto-XXX/adicional-1.jpg",
+      "alt": "Vista adicional del producto",
+      "tipo": "secundaria"
+    }
+  ],
+  "variantes": [
+    {
+      "nombre": "Tamaño",
+      "opciones": ["Pequeño", "Mediano", "Grande"]
+    }
+  ]
+}

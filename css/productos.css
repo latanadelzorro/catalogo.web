@@ -1,0 +1,419 @@
+/* ============================================
+   ESTILOS DE LA SECCIÓN DE PRODUCTOS
+   ============================================ */
+
+/* Contenedor principal de la cuadrícula de productos */
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+/* Estilo base para cada tarjeta de producto */
+.producto {
+    background: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(232, 217, 197, 0.6);
+    position: relative;
+}
+
+/* Efecto hover para la tarjeta */
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(44, 24, 16, 0.12);
+    border-color: var(--color-acento);
+}
+
+/* Contenedor de la imagen del producto */
+.producto-imagen {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background-color: var(--color-fondo-secundario);
+    position: relative;
+}
+
+/* Estilo de la imagen */
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+/* Efecto hover para la imagen */
+.producto:hover .producto-imagen img {
+    transform: scale(1.05);
+}
+
+/* Contenedor de la información del producto */
+.producto-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: #FFFFFF;
+}
+
+/* Cabecera del producto (categoría y alérgenos) */
+.producto-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Estilo de la etiqueta de categoría */
+.producto-categoria {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Efecto de brillo al pasar el ratón */
+.producto-categoria::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.producto-categoria:hover::after {
+    opacity: 1;
+}
+
+/* Estilos específicos para cada categoría */
+.producto-categoria[data-categoria="tradicional"] {
+    background: linear-gradient(135deg, #8B5A2B 0%, #C18D4E 100%);
+}
+
+.producto-categoria[data-categoria="navideno"],
+.producto-categoria[data-categoria="navideño"] {
+    background: linear-gradient(135deg, #B71C1C 0%, #E53935 100%);
+}
+
+.producto-categoria[data-categoria="temporada"] {
+    background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+}
+
+.producto-categoria[data-categoria="sin-gluten"] {
+    background: linear-gradient(135deg, #5D4037 0%, #8D6E63 100%);
+}
+
+/* Contenedor de alérgenos */
+.alergenos {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+/* Estilo del título del producto */
+.producto h3 {
+    font-size: 1.4rem;
+    margin: 0.5rem 0 0.75rem;
+    color: var(--color-primario);
+    font-family: 'Playfair Display', serif;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+}
+
+/* Efecto hover para el título */
+.producto:hover h3 {
+    color: var(--color-secundario);
+}
+
+/* Estilo de la descripción */
+.descripcion {
+    color: var(--color-texto);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+/* Estilo de la lista de ingredientes */
+.ingredientes {
+    font-size: 0.85rem;
+    color: var(--color-texto-claro);
+    margin: 0.5rem 0 1.25rem;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+/* Pie de la tarjeta */
+.producto-pie {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-borde);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Contenedor de variantes */
+.variantes {
+    margin: 0.5rem 0;
+    width: 100%;
+}
+
+/* Estilo de las etiquetas de las variantes */
+.producto-variante label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 0.85rem;
+    color: var(--color-texto);
+    font-weight: 500;
+}
+
+/* Estilo del selector de variantes */
+.variante-select {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238B7355' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 12px;
+    padding-right: 2.5rem;
+}
+
+/* Efecto hover y focus para el selector */
+.variante-select:hover,
+.variante-select:focus {
+    border-color: var(--color-acento);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(212, 167, 106, 0.2);
+}
+
+/* Estilo del botón de añadir al carrito */
+.btn-anadir {
+    background: var(--color-secundario);
+    color: white;
+    border: none;
+    padding: 0.9rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Efecto hover para el botón */
+.btn-anadir:hover {
+    background: var(--color-primario);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(139, 90, 43, 0.3);
+}
+
+/* Efecto de pulsación */
+.btn-anadir:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto de brillo al pasar el ratón */
+.btn-anadir::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.btn-anadir:hover::after {
+    opacity: 1;
+}
+
+/* Icono del carrito en el botón */
+.btn-anadir i {
+    font-size: 1.1em;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de animación para el icono */
+.btn-anadir:hover i {
+    transform: translateX(3px);
+}
+
+/* Mensaje de carga */
+.cargando {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--color-texto-claro);
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+/* Mensaje de sin resultados */
+.sin-resultados {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--color-texto-claro);
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   ESTILOS RESPONSIVE
+   ============================================ */
+
+/* Tablets en orientación horizontal */
+@media (max-width: 1199px) {
+    .grid-productos {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.75rem;
+    }
+    
+    .producto-info {
+        padding: 1.25rem;
+    }
+    
+    .producto h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Tablets en orientación vertical */
+@media (max-width: 991px) {
+    .grid-productos {
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .producto-imagen {
+        height: 200px;
+    }
+}
+
+/* Móviles grandes */
+@media (max-width: 767px) {
+    .grid-productos {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1.25rem;
+    }
+    
+    .producto-info {
+        padding: 1.25rem 1rem;
+    }
+    
+    .producto h3 {
+        font-size: 1.25rem;
+    }
+    
+    .btn-anadir {
+        padding: 0.8rem 1.25rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 575px) {
+    .grid-productos {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    
+    .producto-imagen {
+        height: 220px;
+    }
+    
+    .producto-cabecera {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .alergenos {
+        width: 100;
+    }
+}
+
+/* Mejoras para modo oscuro */
+@media (prefers-color-scheme: dark) {
+    .producto {
+        background-color: #1f2937;
+        color: #f3f4f6;
+    }
+    
+    .producto h3,
+    .precio {
+        color: #f9fafb;
+    }
+    
+    .descripcion,
+    .ingredientes {
+        color: #d1d5db;
+    }
+    
+    .producto-pie {
+        border-top-color: #374151;
+    }
+    
+    .filtro-pill {
+        background-color: #374151;
+        color: #f3f4f6;
+    }
+    
+    .filtro-pill:hover {
+        background-color: #4b5563;
+    }
+    
+    .filtro-pill.is-active {
+        background-color: #3b82f6;
+    }
+    
+    .variante-select {
+        background-color: #1f2937;
+        border-color: #4b5563;
+        color: #f3f4f6;
+    }
+}

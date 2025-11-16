@@ -1,0 +1,35 @@
+{
+  "id": "producto-004",
+  "nombre": "Galletas de Jengibre",
+  "descripcion": "Divertidas galletas con forma de muñeco de jengibre.",
+  "precio": 13.50,
+  "categoria": "navideno",
+  "ingredientes": [
+    "Harina de trigo",
+    "miel",
+    "mantequilla",
+    "azúcar moreno",
+    "huevo",
+    "jengibre en polvo",
+    "canela",
+    "clavo",
+    "bicarbonato",
+    "almendras"
+  ],
+  "alergenos": ["gluten", "huevo", "frutos-secos"],
+  "disponible": true,
+  "destacado": true,
+  "imagenes": [
+    {
+      "src": "imagenes/galletas gengibre.jpeg",
+      "alt": "Galletas de Jengibre",
+      "tipo": "principal"
+    }
+  ],
+  "variantes": [
+    {
+      "nombre": "Cantidad",
+      "opciones": ["6 unidades", "12 unidades", "24 unidades"]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "producto-003",
+  "nombre": "Mantecados",
+  "descripcion": "Clásicos mantecados de canela, suaves y aromáticos.",
+  "precio": 10.00,
+  "categoria": "navideno",
+  "ingredientes": [
+    "Harina de trigo",
+    "azúcar",
+    "manteca de cerdo",
+    "canela",
+    "ajonjili",
+    "limón"
+  ],
+  "alergenos": ["gluten", "sesamo", "sulfitos"],
+  "disponible": true,
+  "destacado": true,
+  "imagenes": [
+    {
+      "src": "imagenes/mantecados.jpeg",
+      "alt": "Mantecados",
+      "tipo": "principal"
+    }
+  ],
+  "variantes": [
+    {
+      "nombre": "Cantidad",
+      "opciones": ["6 unidades", "12 unidades", "24 unidades"]
+    }
+  ]
+}

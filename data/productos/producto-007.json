@@ -1,14 +1,13 @@
 {
-  "id": "producto-001",
-  "nombre": "Roscos de Vino",
-  "descripcion": "Deliciosos roscos esponjosos con un toque de vino tinto.",
-  "precio": 12.50,
+  "id": "producto-007",
+  "nombre": "Roscos de Azúcar",
+  "descripcion": "Especialidad andaluza, suaves y esponjosos.",
+  "precio": 12.00,
   "categoria": "tradicional",
   "ingredientes": [
     "Harina de trigo",
     "azúcar",
     "huevo",
-    "vino tinto",
     "aceite de girasol",
     "levadura",
     "canela",
@@ -19,8 +18,8 @@
   "destacado": true,
   "imagenes": [
     {
-      "src": "imagenes/roscos-vino.jpeg",
-      "alt": "Roscos de Vino",
+      "src": "imagenes/roscosdeazucar.jpg",
+      "alt": "Roscos de Azúcar",
       "tipo": "principal"
     }
   ],

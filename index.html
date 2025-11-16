@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/productos.css?v=1.1">
 </head>
 <body>
     <header>
@@ -72,297 +73,17 @@
         <section id="destacados">
             <h2>Nuestros Productos</h2>
             <div class="catalogo-filtros" aria-label="Categorías del catálogo">
-                <button class="filtro-pill is-active" type="button">Todos</button>
-                <button class="filtro-pill" type="button">Tradicional</button>
-                <button class="filtro-pill" type="button">Navideño</button>
-                <button class="filtro-pill" type="button">Temporada</button>
-                <button class="filtro-pill" type="button">Sin gluten</button>
+                <button class="filtro-pill is-active" type="button" data-categoria="todos">Todos</button>
+                <button class="filtro-pill" type="button" data-categoria="tradicional">Tradicional</button>
+                <button class="filtro-pill" type="button" data-categoria="navideno">Navideño</button>
+                <button class="filtro-pill" type="button" data-categoria="temporada">Temporada</button>
+                <button class="filtro-pill" type="button" data-categoria="sin-gluten">Sin gluten</button>
             </div>
             
             <div class="grid-productos">
-                <!-- Roscos de Vino -->
-                <div class="producto" data-categoria="tradicional">
-                    <div class="producto-imagen">
-                        <img src="imagenes/roscos-vino.jpeg" alt="Roscos de Vino" loading="lazy">
-                    </div>
-                    <div class="producto-info">
-                        <div class="producto-cabecera">
-                            <span class="producto-categoria">Tradicional</span>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-bread-slice" title="Gluten"></i>
-                                <span class="tooltip-text">Gluten</span>
-                            </div>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-egg" title="Huevo"></i>
-                                <span class="tooltip-text">Huevo</span>
-                            </div>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-seedling" title="Sésamo (ajonjili)"></i>
-                                <span class="tooltip-text">Sésamo (ajonjili)</span>
-                            </div>
-                        </div>
-                        <h3>Roscos de Vino</h3>
-                        <p class="descripcion">Deliciosos roscos esponjosos con un toque de vino tinto.</p>
-                        <div class="ingredientes">
-                            <strong>Ingredientes:</strong> Harina de trigo, azúcar, huevo, vino tinto, aceite de girasol, levadura, canela y ajonjolí
-                        </div>
-                        <div class="alergenos-lista">
-                            <strong>Alérgenos:</strong> Gluten, Huevo, Sésamo (ajonjili)
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tiramisú -->
-                <div class="producto" data-categoria="tradicional">
-                    <div class="producto-imagen">
-                        <img src="imagenes/tiramisu.jpg" alt="Tiramisú" loading="lazy">
-                    </div>
-                    <div class="producto-info">
-                        <div class="producto-cabecera">
-                            <span class="producto-categoria">Tradicional</span>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-bread-slice" title="Gluten"></i>
-                                <span class="tooltip-text">Gluten</span>
-                            </div>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-egg" title="Huevo"></i>
-                                <span class="tooltip-text">Huevo</span>
-                            </div>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-cheese" title="Lácteos"></i>
-                                <span class="tooltip-text">Lácteos</span>
-                            </div>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-coffee" title="Cafeína"></i>
-                                <span class="tooltip-text">Cafeína</span>
-                            </div>
-                        </div>
-                        <h3>Tiramisú</h3>
-                        <p class="descripcion">Clásico postre italiano con capas de café y mascarpone.</p>
-                        <div class="ingredientes">
-                            <strong>Ingredientes:</strong> Queso mascarpone, huevos, azúcar, café, bizcochos de soletilla, cacao en polvo y licor de café (opcional)
-                        </div>
-                        <div class="alergenos-lista">
-                            <strong>Alérgenos:</strong> Gluten, Huevo, Lácteos, Cafeína
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mantecados -->
-                <div class="producto" data-categoria="navideno">
-                    <div class="producto-imagen">
-                        <img src="imagenes/mantecados.jpeg" alt="Mantecados" loading="lazy">
-                    </div>
-                    <div class="producto-info">
-                        <div class="producto-cabecera">
-                            <span class="producto-categoria">Navideño</span>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-bread-slice" title="Gluten"></i>
-                                <span class="tooltip-text">Gluten</span>
-                            </div>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-seedling" title="Sésamo (ajonjili)"></i>
-                                <span class="tooltip-text">Sésamo (ajonjili)</span>
-                            </div>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-wine-bottle" title="Sulfitos"></i>
-                                <span class="tooltip-text">Sulfitos</span>
-                            </div>
-                        </div>
-                        <h3>Mantecados</h3>
-                        <p class="descripcion">Clásicos mantecados de canela, suaves y aromáticos.</p>
-                        <div class="ingredientes">
-                            <strong>Ingredientes:</strong> Harina de trigo, azúcar, manteca de cerdo, canela, ajonjili y limón
-                        </div>
-                        <div class="alergenos-lista">
-                            <strong>Alérgenos:</strong> Gluten, Sésamo (ajonjili), Sulfitos
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Galletas de Jengibre -->
-                <div class="producto" data-categoria="navideno">
-                    <div class="producto-imagen">
-                        <img src="imagenes/galletas gengibre.jpeg" alt="Galletas de Jengibre" loading="lazy">
-                    </div>
-                    <div class="producto-info">
-                        <div class="producto-cabecera">
-                            <span class="producto-categoria">Navideño</span>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-bread-slice" title="Gluten"></i>
-                                <span class="tooltip-text">Gluten</span>
-                            </div>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-egg" title="Huevo"></i>
-                                <span class="tooltip-text">Huevo</span>
-                            </div>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-seedling" title="Frutos secos (almendra)"></i>
-                                <span class="tooltip-text">Frutos secos (almendra)</span>
-                            </div>
-                        </div>
-                        <h3>Galletas de Jengibre</h3>
-                        <p class="descripcion">Divertidas galletas con forma de muñeco de jengibre.</p>
-                        <div class="ingredientes">
-                            <strong>Ingredientes:</strong> Harina de trigo, miel, mantequilla, azúcar moreno, huevo, jengibre en polvo, canela, clavo, bicarbonato y almendras
-                        </div>
-                        <div class="alergenos-lista">
-                            <strong>Alérgenos:</strong> Gluten, Huevo, Frutos secos (almendra)
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Palmeras -->
-                <div class="producto" data-categoria="tradicional">
-                    <div class="producto-imagen">
-                        <img src="imagenes/palmeras.avif" alt="Palmeras" loading="lazy">
-                    </div>
-                    <div class="producto-info">
-                        <div class="producto-cabecera">
-                            <span class="producto-categoria">Tradicional</span>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-bread-slice" title="Gluten"></i>
-                                <span class="tooltip-text">Gluten</span>
-                            </div>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-cheese" title="Lácteos"></i>
-                                <span class="tooltip-text">Lácteos</span>
-                            </div>
-                        </div>
-                        <h3>Palmeras</h3>
-                        <p class="descripcion">Crujientes palmeras de hojaldre con azúcar.</p>
-                        <div class="ingredientes">
-                            <strong>Ingredientes:</strong> Masa de hojaldre, azúcar y mantequilla
-                        </div>
-                        <div class="alergenos-lista">
-                            <strong>Alérgenos:</strong> Gluten, Lácteos
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Piononos -->
-                <div class="producto" data-categoria="tradicional">
-                    <div class="producto-imagen">
-                        <img src="imagenes/pionono.webp" alt="Piononos" loading="lazy">
-                    </div>
-                    <div class="producto-info">
-                        <div class="producto-cabecera">
-                            <span class="producto-categoria">Tradicional</span>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-bread-slice" title="Gluten"></i>
-                                <span class="tooltip-text">Gluten</span>
-                            </div>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-egg" title="Huevo"></i>
-                                <span class="tooltip-text">Huevo</span>
-                            </div>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-cheese" title="Lácteos"></i>
-                                <span class="tooltip-text">Lácteos</span>
-                            </div>
-                        </div>
-                        <h3>Piononos</h3>
-                        <p class="descripcion">Suaves bizcochos enrollados rellenos de crema.</p>
-                        <div class="ingredientes">
-                            <strong>Ingredientes:</strong> Huevos, azúcar, harina de trigo, almidón de maíz, leche, canela y limón
-                        </div>
-                        <div class="alergenos-lista">
-                            <strong>Alérgenos:</strong> Gluten, Huevo, Lácteos
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Roscos de Azúcar -->
-                <div class="producto" data-categoria="tradicional">
-                    <div class="producto-imagen">
-                        <img src="imagenes/roscosdeazucar.jpg" alt="Roscos de Azúcar" loading="lazy">
-                    </div>
-                    <div class="producto-info">
-                        <div class="producto-cabecera">
-                            <span class="producto-categoria">Tradicional</span>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-bread-slice" title="Gluten"></i>
-                                <span class="tooltip-text">Gluten</span>
-                            </div>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-egg" title="Huevo"></i>
-                                <span class="tooltip-text">Huevo</span>
-                            </div>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-seedling" title="Sésamo (ajonjili)"></i>
-                                <span class="tooltip-text">Sésamo (ajonjili)</span>
-                            </div>
-                        </div>
-                        <h3>Roscos de Azúcar</h3>
-                        <p class="descripcion">Especialidad andaluza, suaves y esponjosos.</p>
-                        <div class="ingredientes">
-                            <strong>Ingredientes:</strong> Harina de trigo, azúcar, huevo, aceite de girasol, levadura, canela y ajonjolí
-                        </div>
-                        <div class="alergenos-lista">
-                            <strong>Alérgenos:</strong> Gluten, Huevo, Sésamo (ajonjili)
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pestiños -->
-                <div class="producto" data-categoria="tradicional">
-                    <div class="producto-imagen">
-                        <img src="imagenes/pestiños.jpg" alt="Pestiños" loading="lazy">
-                    </div>
-                    <div class="producto-info">
-                        <div class="producto-cabecera">
-                            <span class="producto-categoria">Tradicional</span>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-bread-slice" title="Gluten"></i>
-                                <span class="tooltip-text">Gluten</span>
-                            </div>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-wine-bottle" title="Vino"></i>
-                                <span class="tooltip-text">Vino</span>
-                            </div>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-seedling" title="Sésamo (ajonjili)"></i>
-                                <span class="tooltip-text">Sésamo (ajonjili)</span>
-                            </div>
-                        </div>
-                        <h3>Pestiños</h3>
-                        <p class="descripcion">Dulce tradicional andaluz de Semana Santa.</p>
-                        <div class="ingredientes">
-                            <strong>Ingredientes:</strong> Harina de trigo, vino blanco, aceite de oliva, azúcar, canela, ajonjolí y cáscara de naranja
-                        </div>
-                        <div class="alergenos-lista">
-                            <strong>Alérgenos:</strong> Gluten, Vino, Sésamo (ajonjili)
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hojaldrinas -->
-                <div class="producto" data-categoria="tradicional">
-                    <div class="producto-imagen">
-                        <img src="imagenes/hojaldrinas.jpeg" alt="Hojaldrinas" loading="lazy">
-                    </div>
-                    <div class="producto-info">
-                        <div class="producto-cabecera">
-                            <span class="producto-categoria">Tradicional</span>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-bread-slice" title="Gluten"></i>
-                                <span class="tooltip-text">Gluten</span>
-                            </div>
-                            <div class="alergeno-tooltip">
-                                <i class="fas fa-cheese" title="Lácteos"></i>
-                                <span class="tooltip-text">Lácteos</span>
-                            </div>
-                        </div>
-                        <h3>Hojaldrinas</h3>
-                        <p class="descripcion">Delicadas hojaldrinas crujientes, perfectas para acompañar infusiones.</p>
-                        <div class="ingredientes">
-                            <strong>Ingredientes:</strong> Harina de trigo, mantequilla, agua, sal y azúcar
-                        </div>
-                        <div class="alergenos-lista">
-                            <strong>Alérgenos:</strong> Gluten, Lácteos
-                        </div>
-                    </div>
-                </div>
+                <!-- Los productos se cargarán aquí dinámicamente -->
+                <div class="cargando">Cargando productos...</div>
+            </div>
             </div>
         </section>
     </main>
@@ -406,18 +127,26 @@
        <i class="fab fa-whatsapp"></i>
    </a>
 
+    <script src="js/productos.js"></script>
     <script>
         // Calcula automáticamente el número de recetas tradicionales y actualiza la estadística del héroe
         document.addEventListener('DOMContentLoaded', function () {
-            const productosTradicionales = document.querySelectorAll('.grid-productos .producto[data-categoria="tradicional"]');
-            const totalTradicionales = productosTradicionales.length;
+            // Esta función ahora se manejará en productos.js
+            // La mantenemos aquí por compatibilidad, pero se puede eliminar una vez verificado
+            const actualizarContadorTradicionales = () => {
+                const productosTradicionales = document.querySelectorAll('.grid-productos .producto[data-categoria="tradicional"]');
+                const totalTradicionales = productosTradicionales.length;
 
-            if (totalTradicionales > 0) {
-                const heroStatNumber = document.querySelector('#hero .hero-stats .hero-stat .stat-number');
-                if (heroStatNumber) {
-                    heroStatNumber.textContent = totalTradicionales.toString();
+                if (totalTradicionales > 0) {
+                    const heroStatNumber = document.querySelector('#hero .hero-stats .hero-stat .stat-number');
+                    if (heroStatNumber) {
+                        heroStatNumber.textContent = totalTradicionales.toString();
+                    }
                 }
-            }
+            };
+
+            // Llamamos a la función después de que los productos se hayan cargado
+            document.addEventListener('productosCargados', actualizarContadorTradicionales);
         });
     </script>
 </body>
